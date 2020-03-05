@@ -1,0 +1,17 @@
+export const ADD_ANNONCE="ADD_ANNONCE"
+export const DELETE_ANNONCE="DELETE_ANNONCE"
+export const UPDATE_ANNONCE="UPDATE_ANNONCE"
+
+
+//auth actions
+export const REGISTER_SUCCES="REGISTER_SUCCES"
+export const REGISTER_FAILED="REGISTER_FAILED"
+export const LOGIN_SUCCES="LOGIN_SUCCES"
+export const LOGIN_FAILED="OGIN_FAILED"
+export const AUTH_ERRORS="AUTH_ERRORS"
+export const CLEAR_ERRORS="CLEAR_ERRORS"
+export const LOGOUT="LOGOUT"
+export const USER_LOADED='USER_LOADED'
+//alert action
+export const SET_ALERT="SET_ALERT"
+export const REMOVE_ALERT="REMOVE_ALERT"

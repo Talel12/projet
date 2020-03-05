@@ -1,0 +1,18 @@
+
+  .map {
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .aside {
+    height: 80%;
+    width: 25vw;
+    opacity: 50%;
+    border-radius: 20px;
+    background-color: white;
+    position: absolute;
+    right: 30px;
+    top: 7vh;
+    z-index: 5;
+    text-align: center;
+  }
