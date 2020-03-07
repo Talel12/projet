@@ -21,6 +21,7 @@ function App() {
   return (
     <BrowserRouter>
     <MapAfficher/>
+    <div className="container" id="content">
     <Navbar  id="navbar"/>
     <Alerts/>
     <Switch>
@@ -30,7 +31,7 @@ function App() {
       <Route exact path="/inscription" component={Register}/>
       <Route exact path="/connect" component={Login}/>
     </Switch>
-   
+   </div>
     </BrowserRouter>
   );
 }

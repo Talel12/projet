@@ -5,14 +5,14 @@
   }
   
   .aside {
-    height: 80%;
+    height: 60%;
     width: 25vw;
-    opacity: 50%;
+    opacity: 70%;
     border-radius: 20px;
     background-color: white;
     position: absolute;
-    right: 30px;
-    top: 7vh;
+    left: 0px;
+    top: 20vh;
     z-index: 5;
     text-align: center;
   }

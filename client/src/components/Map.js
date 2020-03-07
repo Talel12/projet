@@ -7,6 +7,8 @@ import '../components/map.css'
 // import MarkerClusterGroup from 'react-leaflet-markercluster';
 // import 'react-leaflet-markercluster/dist/styles.min.css';
 
+import Register from './Register';
+
 // var markers = L.markerClusterGroup();
 
 
@@ -27,12 +29,24 @@ class MapAfficher extends Component {
         super(props);
         this.state = {
             tab: [{
-                lat: 33.457103164901056,
-                lng: 9.025008521737607,
-            }, {
-                lat: 33.457103164901056,
-                lng: 9.025008521737607,
-            }, {
+                location: [33.457103164901056,
+                    9.025008521737607],
+                "addHandler": "mouseover", //on mouseover the pushpin, infobox shown
+                "infoboxOption": { title: 'Infobox Title', description: 'Infobox' },
+                "pushPinOption": { title: 'Pushpin Title', description: 'Pushpin' },
+                "infoboxAddHandler": { "type": "click", callback: this.callBackMethod },
+                "pushPinAddHandler": { "type": "click", callback: this.callBackMethod }
+
+            },{
+                location:[33.457103164901056,
+                 11.025008521737607],
+                 addHandler:"mouseover", //on mouseover the pushpin, infobox shown
+                 infoboxOption: { title: 'Infobox Title', description: 'Infobox' },
+                 pushPinOption:{ title: 'Pushpin Title', description: 'Pushpin' },
+                 infoboxAddHandler: {"type" : "click", callback: this.callBackMethod },
+                 pushPinAddHandler: {"type" : "click", callback: this.callBackMethod }
+               
+                } , {
                 lat: 33.457153164901056,
                 lng: 9.025003521737607,
             }, {
@@ -49,7 +63,7 @@ class MapAfficher extends Component {
                 lng: 9.335008521737607,
             }],
 
-            zoom: 7
+            zoom: 6
         }
     }
 
@@ -64,15 +78,16 @@ class MapAfficher extends Component {
             <div className="map">
                 <ReactBingmaps
                     bingmapKey="ApRNBJloRVYTAKCIFVWKgDGr-ZIwJbs74dMXgLPYpBqRjYiwlveI02U8ulNuSEYY"
-                    navigationBarMode={"minified"}
-                    supportedMapTypes={["road", "canvasDark"]}
+                    NavigationBarMode={'compact'}
+                    NavigationBarOrientation={"vertical"}
+                    supportedMapTypes={["road", "canvasDark","canvasLight"]}
                     zoom={this.state.zoom}
                     disableStreetside={true}
-                    
-
+                    center={[33.87932899768377, 11.019267272949257]}
+                    infoboxesWithPushPins={this.state.tab}
                 >
-                 
-                    </ReactBingmaps>
+
+                </ReactBingmaps>
 
                 <div className="aside"><h1>Find Some House</h1></div>
 

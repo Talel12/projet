@@ -8,13 +8,15 @@ body {
   height: 100%;
 }
 #navbar{
-  position: absolute;
-  top: 0px;
 }
 Map{
-  height: 100vh;
+  height: 100%;
 }
 
+#content{
+  position: relative;
+  top:-100vh;
+}
 
 input[type=text], select {
     width: 100%;
