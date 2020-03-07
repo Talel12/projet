@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Form, Col, Row } from 'react-bootstrap';
 
-export const Annonce = () => {
+const Annonce = () => {
     return (
         <div>
             <form>
@@ -39,21 +39,16 @@ export const Annonce = () => {
 
                         </Col>
                     </Form.Group>
-                    <Form.Label>Titre</Form.Label>
+                    
                     <Form.Control type="text" placeholder="Titre de l'annonce" />
-                    <Form.Label>Prix</Form.Label>
+               
                     <Form.Control type="number" placeholder="Prix de l'annonce" />
                     {/* *********************************************** */}
 
-                    <Form.Label>Surface Habitable</Form.Label>
                     <Form.Control type="number" placeholder="Surface Habitable" />
-                    <Form.Label>Surface Terrain</Form.Label>
                     <Form.Control type="number" placeholder="Surface Terrain" />
-                    <Form.Label>Nembre des chambres</Form.Label>
                     <Form.Control type="number" placeholder="Nembre des chambres" />
-                    <Form.Label>Nembre de salle de bains</Form.Label>
                     <Form.Control type="number" placeholder="Nembre de salle de bains" />
-                    <Form.Label>Nombre des etage</Form.Label>
                     <Form.Control type="number" placeholder="Nombre des etage" />
 
 
