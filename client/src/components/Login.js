@@ -59,7 +59,7 @@ class Login extends Component {
       </div>
     )
   }
-
+/*** */
 }
 const mapStateToProps = state => {
   return { auth: state.auth }
