@@ -15,8 +15,8 @@ export const Navbar = props => {
       <ul className="navbar-nav mr-auto">
         <li className="nav-item active hello"> Hello,{props.auth.user && props.auth.user.nom + ' ' + props.auth.user.prenom}</li>
         <Link to="/Annonce">
-      <button className="btn btn-outline-success m-2" type="button">Deposer votre annonce</button>
-    </Link>
+          <button className="btn btn-outline-success m-2" type="button">Deposer votre annonce</button>
+        </Link>
         <li className="nav-item active">
           <button className="btn btn-outline-success m-2 br" type="button">modifier mon profil</button>
         </li>
