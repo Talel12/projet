@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid';
+
 import { setAlert, removeAlert } from '../actions/AlertActions'
 import { register, clearError } from '../actions/AuthAction'
-// import { reduxForm } from 'redux-form'
+
+
+
+
+
 
 
 class Register extends Component {
