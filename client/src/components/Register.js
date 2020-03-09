@@ -2,8 +2,16 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid';
 
+
 import {setAlert,removeAlert} from '../actions/AlertActions'
 import{register,clearError}from '../actions/AuthAction'
+
+
+
+
+
+
+
 
 
 
@@ -44,6 +52,9 @@ class Register extends Component {
         }
 
         else if (!this.state.email.includes('@')) {
+
+          
+
             let id = uuidv4()
             this.props.setAlert('svp entrer une valide adresse email', 'danger', id)
             setTimeout(() => {
@@ -54,11 +65,22 @@ class Register extends Component {
         else if (this.state.password.length < 8) {
             let id = uuidv4()
             this.props.setAlert('svp créer un mot de passe sécurisé.', 'danger', id)
+
             setTimeout(() => {
                 this.props.removeAlert(id)
                 this.props.clearError()
             }, 5000)
         }
+
+        else if (this.state.password.length < 8) {
+            let id = uuidv4()
+            this.props.setAlert('svp créer un mot de passe sécurisé.', 'danger', id)
+            setTimeout(() => {
+                this.props.removeAlert(id)
+                this.props.clearError()
+            }, 5000)
+        }
+
         else {
             this.props.register({
                 nom: this.state.nom,
