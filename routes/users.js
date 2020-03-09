@@ -5,6 +5,7 @@ const { check, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt=require('jsonwebtoken')
 const jwtSecret="secret"
+const auth = require('../middleware/auth')
 
 //register users
 router.post('/',[check('nom','entrer votre nom').not().  isEmpty(),
@@ -59,6 +60,41 @@ User.findOne({email})
     }
 
 }).catch(err=>console.log(err.message))
+})
+
+
+
+  //update users 
+
+  router.put('/:id', auth, (req, res) => {
+    const { nom,prenom,adress,password,confirmation,email,cin } = req.body
+    let userFields = {}
+    if (nom) userFields.nom = nom
+    if (prenom) userFields.prenom = prenom
+    if (adress) userFields.adress = adress
+    if (password) userFields.password = password
+    if (confirmation) userFields.confirmation =confirmation
+    if (email) userFields.email = email
+    if (cin) userFields.cin = cin
+    User.findById(req.params.id)
+        .then(user => {
+            if (!user) { return res.json({ msg: 'user not found' }) }
+        
+            else {
+                User.findByIdAndUpdate(req.params.id, { $set: userFields }, (err, data) => {
+                    res.json({ msg: "annonce modifié" })
+                })
+            }
+        })
+      
+})
+
+//get user 
+
+router.get('/:id', auth, (req, res) => {
+   User.find({ user: req.user.id })
+        .then(user => res.json(user.nom))
+        .catch(err => console.log(err.message))
 })
 module.exports=router
 

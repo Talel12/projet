@@ -55,6 +55,7 @@ class Login extends Component {
         </div>
 
         <button onClick={this.loginNow} className="btn btn-outline-success m-2" type="button">Submit</button>
+        <button className="btn btn-outline-success m-2"  onClick={()=> this.props.history.goBack()}>Cancel</button>
       </form>
       </div>
     )

@@ -53,7 +53,7 @@ export const Navbar = props => {
               <Link className="nav-link" to="/Home">Home <span className="sr-only">(current)</span></Link>
             </li>
             <li className="nav-item active">
-              <Link className="nav-link" to="/About">About <span className="sr-only">(current)</span></Link>
+              <Link className="nav-link" to="/contactUs">contact <span className="sr-only">(current)</span></Link>
             </li>
 
           </ul>

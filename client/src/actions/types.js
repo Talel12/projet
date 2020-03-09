@@ -15,3 +15,7 @@ export const USER_LOADED='USER_LOADED'
 //alert action
 export const SET_ALERT="SET_ALERT"
 export const REMOVE_ALERT="REMOVE_ALERT"
+/*contact us */
+export const CONTACT_SUCCES="CONTACT_SUCCES"
+export const CONTACT_FAILED="CONTACT_FAILED"
+export const CONTACTUS_LOADED="CONTACTUS_LOADED"

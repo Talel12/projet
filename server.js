@@ -14,6 +14,7 @@ console.log('data base connected...')})
 app.use('/api/user',require("./routes/users"))
 app.use('/api/auth',require("./routes/auth"))
 app.use('/api/annonce',require("./routes/annonce"))
+app.use('/api/contact',require("./routes/contact"))
 
 
 

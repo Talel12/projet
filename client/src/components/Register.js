@@ -127,6 +127,7 @@ class Register extends Component {
 
                 </div>
                 <button onClick={this.registernow} className="btn btn-outline-success m-2" type="button">inscrit </button>
+                <button className="btn btn-outline-success m-2"  onClick={()=> this.props.history.goBack()}>Cancel</button>
             </div>
         )
     }
